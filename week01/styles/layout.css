@@ -66,3 +66,7 @@ body {
     padding: 10px;
   }
   
+  .first-card {
+    display: flex;
+    flex-direction:row;
+  }
