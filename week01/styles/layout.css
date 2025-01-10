@@ -65,16 +65,3 @@ body {
     text-align: center;
     padding: 10px;
   }
-  
-  .first-card {
-    display: flex;
-    align-items:center;
-    flex-direction:row; 
-    justify-content: space-between; 
-    padding: 20px;
-  }
-  image {
-    
-    width:30%;
-    border-radius: 10px;
-  }
