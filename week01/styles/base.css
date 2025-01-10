@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -43,6 +45,11 @@ body {
     color: #fff;
     
   }
+
+  .nav a:hover {
+    text-decoration:underline;
+    color:black;
+  }
   
   .main {
     grid-row: 3 / 4;
@@ -56,11 +63,11 @@ body {
   .aside {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
-    background-color: #fff;
-    color: #000;
+    background-color: #999;
     padding: 20px;
     border-radius: 10px;
     margin: 20px;
+    height:40%;
   }
   
   .footer {
@@ -76,6 +83,7 @@ body {
     padding:10px;
     border-radius:10px;
     text-align:center;
+    box-shadow: 0 4px 8px black;
   }
 
   .profile-image {
@@ -127,4 +135,47 @@ body {
   padding:10px;
   border-radius:10px;
   text-align:center;
+  box-shadow: 0 4px 8px black;
  }
+
+h3 {
+  background-color:#c9b22f;
+  box-shadow: 0 4px 8px black;
+  padding:10px;
+  border-radius:10px;
+  text-align:center;
+ }
+
+ .favorite-books {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorite-books li {
+  font-family: 'Playfair Display', serif, 'Playwrite Australia SA', sans-serif;
+  font-size: 16px;
+  color: black;
+  padding: 5px 0;
+  border-bottom: 1px solid #fff;
+}
+
+.favorite-books li:last-child {
+  border-bottom: none;
+}
+
+.timaeus {
+  width:160px;
+ 
+  box-shadow: 0 4px 8px black;
+  border-radius:10px;
+}
+
+.books-div{
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  justify-content: space-between;
+  margin:20px;
+
+}
