@@ -68,5 +68,13 @@ body {
   
   .first-card {
     display: flex;
-    flex-direction:row;
+    align-items:center;
+    flex-direction:row; 
+    justify-content: space-between; 
+    padding: 20px;
+  }
+  image {
+    
+    width:30%;
+    border-radius: 10px;
   }
