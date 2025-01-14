@@ -19,7 +19,10 @@ myInfo = {
     ],
   };
 
-myInfo.favoriteFoods.array.forEach(function(element) {
-   let element = document.createElement("li");
-    document.querySelector("#favorite-foods").appendChild(element)
-});
+const foodsUl = document.querySelector("#favorite-foods");
+function addItem(food) {
+    let favoriteFood = document.createElement('li');
+    favoriteFood.textContent = food;
+    foodsUl.appendChild(favoriteFood);
+}
+myInfo.favoriteFoods.forEach(addItem);
