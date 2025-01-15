@@ -1,13 +1,6 @@
 const input = document.querySelector("#favchap")
 const button = document.querySelector("button");
 const list = document.querySelector("#list");
-//const row = document.createElement("li");
-//const deleteButton = document.createElement('button');
-
-//row.textContent = input.value;
-//deleteButton.textContext = "❌";
-//row.append(deleteButton);
-//list.append(row);
 
 button.addEventListener('click', function () {
     if (input.value.trim() == '') {
