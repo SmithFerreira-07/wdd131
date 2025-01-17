@@ -1,19 +1,19 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", serif;
   }
 
   .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(94, 0, 94); 
+    background-color: #C03221;
     padding: 0 20px; 
     height: 50px; 
   }
 
   .navbar .brand {
-    color: white;
+    color: #F7F7FF;
     font-size: 1.2rem;
     font-weight: bold;
   }
@@ -24,7 +24,7 @@ body {
   }
 
   .navbar .nav-links a {
-    color: white;
+    color: #F7F7FF;
     text-decoration: none;
     font-size: 1rem;
     margin:20px;
@@ -38,11 +38,43 @@ body {
   .footer {
     grid-row: 4 / 5;
     grid-column: 1 / -1;
-    background-color: rgb(94, 0, 94);
+    background-color: #C03221;
     text-align: center;
     padding: 10px;
+    color:#F7F7FF;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 
   .heading-element{
     text-align:center;
+  }
+
+
+  .album {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px;
+  }
+
+  figure {
+    
+    box-sizing: border-box; 
+    margin: 0; 
+    text-align: center;
+  }
+
+  figure img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
   }
