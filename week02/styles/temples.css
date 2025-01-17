@@ -3,6 +3,10 @@ body {
     font-family: "Roboto", serif;
   }
 
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
   .navbar {
     display: flex;
     align-items: center;
@@ -20,7 +24,8 @@ body {
 
   .navbar .nav-links {
     display: flex;
-    gap: 15px; 
+    gap: 15px;
+    font-weight: bold;
   }
 
   .navbar .nav-links a {
@@ -32,7 +37,8 @@ body {
   }
 
   .navbar .nav-links a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
+    color:#031927;
   }
 
   .footer {
@@ -69,7 +75,7 @@ body {
   figure img {
     width: 100%;
     height: auto;
-    border: 2px solid #ccc;
+    border: 2px solid #F7F7FF;
     border-radius: 5px;
   }
 
@@ -77,4 +83,26 @@ body {
     margin-top: 10px;
     font-size: 1rem;
     color: #333;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #F7F7FF;
+  }
+
+  .x-button{
+    display: none;
+    color:#F7F7FF;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    
   }

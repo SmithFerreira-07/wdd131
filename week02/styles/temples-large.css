@@ -1,0 +1,21 @@
+@media (max-width: 500px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #C03221;
+      width: 100%;
+      padding: 10px 0;
+      gap: 10px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
