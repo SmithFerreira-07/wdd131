@@ -16,4 +16,8 @@
         display: flex;
     }
 
+    .album {
+        grid-template-columns: 1fr; 
+    }
+
 }
