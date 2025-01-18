@@ -1,5 +1,5 @@
 @media (max-width: 500px) {
-    .nav-links {
+    .navbar .nav-links {
       display: none;
       flex-direction: column;
       position: absolute;
@@ -11,10 +11,7 @@
       gap: 10px;
     }
 
-    .nav-links.active {
-      display: flex;
-    }
-
+    
     .hamburger {
       display: flex;
     }
