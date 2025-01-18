@@ -1,110 +1,111 @@
 body {
     margin: 0;
     font-family: "Roboto", serif;
-  }
+}
 
-main{
+main {
     max-width: 800px;
     margin: 0 auto;
 }
-  .navbar {
+
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #C03221;
-    padding: 0 20px; 
-    height: 50px; 
-  }
+    padding: 0 20px;
+    height: 50px;
+}
 
-  .navbar .brand {
+.navbar .brand {
     color: #F7F7FF;
     font-size: 1.2rem;
     font-weight: bold;
-  }
+}
 
-  .navbar .nav-links {
+.navbar .nav-links {
     display: flex;
     gap: 15px;
     font-weight: bold;
-  }
+}
 
-  .navbar .nav-links a {
+.navbar .nav-links a {
     color: #F7F7FF;
     text-decoration: none;
     font-size: 1rem;
-    margin:20px;
+    margin: 20px;
     font-size: 1.1rem;
-  }
+}
 
-  .navbar .nav-links a:hover {
+.navbar .nav-links a:hover {
     text-decoration: underline;
-    color:#031927;
-  }
+    color: #031927;
+}
 
-  .footer {
+.footer {
     grid-row: 4 / 5;
     grid-column: 1 / -1;
     background-color: #C03221;
     text-align: center;
     padding: 10px;
-    color:#F7F7FF;
+    color: #F7F7FF;
     font-size: 1.2rem;
     font-weight: bold;
-  }
+}
 
-  .heading-element{
-    text-align:center;
-  }
-
-
-  .album {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 20px; 
-    padding: 20px;
-  }
-
-  figure {
-    
-    box-sizing: border-box; 
-    margin: 0; 
+.heading-element {
     text-align: center;
-  }
+}
 
-  figure img {
+
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+figure {
+
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
     width: 230px;
-    height: 180px;
+    height: 153px;
     border: 2px solid #F7F7FF;
     border-radius: 5px;
     box-shadow: 0 4px 8px #031927;
-  }
+}
 
-  figcaption {
+figcaption {
     margin-top: 10px;
     font-size: 1rem;
     color: #031927;
     font-weight: bold;
-  }
+}
 
-  .hamburger {
+.hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-  }
+}
 
-  .hamburger span {
+.hamburger span {
     width: 25px;
     height: 3px;
     background: #F7F7FF;
-  }
+}
 
-  .x-button{
+.x-button {
     display: none;
-    color:#F7F7FF;
+    color: #F7F7FF;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-    
-  }
+
+}

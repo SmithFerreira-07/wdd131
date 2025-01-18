@@ -9,13 +9,15 @@ const navLinks = document.getElementById('nav-links');
 const xButton = document.getElementById('x-button');
 
 
+  
 
 hamburger.addEventListener('click', () => {
   if (navLinks.style.display === "flex") {
     navLinks.style.display = "none";
+    
   } else {
     navLinks.style.display = "flex";
     
-    
   }
 });
+
