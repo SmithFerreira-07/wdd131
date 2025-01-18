@@ -73,16 +73,18 @@ main{
   }
 
   figure img {
-    width: 100%;
-    height: auto;
+    width: 230px;
+    height: 180px;
     border: 2px solid #F7F7FF;
     border-radius: 5px;
+    box-shadow: 0 4px 8px #031927;
   }
 
   figcaption {
     margin-top: 10px;
     font-size: 1rem;
-    color: #333;
+    color: #031927;
+    font-weight: bold;
   }
 
   .hamburger {
