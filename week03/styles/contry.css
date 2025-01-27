@@ -1,30 +1,34 @@
+:root {
+    --primary-color: #00D150;
+    --secondary-color: #2e0b91;
+    --text-color: black;
+    --white: #FFFFFF;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", serif;
-    color:black;
+    color: var(--text-color);
 }
-
-
 
 .footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #00D150;
+    background-color: var(--primary-color);
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
 }
 
-
-
 header {
     text-align: center;
     padding: 20px;
-    background: #00D150;
+    background: var(--primary-color);
     font-size: 2rem;
     position: relative;
 }
@@ -33,88 +37,83 @@ header::after {
     content: "";
     display: block;
     height: 20px;
-    background: #2e0b91;
+    background: var(--secondary-color);
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
 }
 
-
-
 .content {
     position: relative;
-  }
-  
-  .image-container {
+}
+
+.image-container {
     position: relative;
+    display: flex;
+    gap: 20px;
     height: auto;
     overflow: hidden;
-  }
-  
-  .background-image {
+}
+
+.background-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  
-  .data {
+}
+
+.data {
     position: absolute;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
-    font-size:1.2rem;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 600px;
     height: 300px;
-    text-align:center;
-  }
-  
-  .info {
+    text-align: center;
+}
+
+.info {
     top: 20px;
     left: 20px;
-   
-  }
-  
-  .weather {
+}
+
+.weather {
     bottom: 20px;
     right: 20px;
-    
-  }
-  
+}
 
-  .data-card-header {
-    background-color: #00D150;
+.data-card-header {
+    background-color: var(--primary-color);
     margin: 0px;
     padding: 10px 15px;
     position: relative;
-    right:35px;
-    bottom:10px;
+    right: 35px;
+    bottom: 10px;
     font-size: 1.2em;
     font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
+    box-shadow: var(--box-shadow);
 }
 
 .data-card-header-weather {
-    background-color: #00D150;
+    background-color: var(--primary-color);
     margin: 0px;
     padding: 10px 15px;
     position: relative;
-    right:35px;
-    bottom:10px;
+    right: 35px;
+    bottom: 10px;
     font-size: 1.2em;
     font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 }
 
-.data-card-header-weather::after{
-    content:"🌤️";
+.data-card-header-weather::after {
+    content: "🌤️";
 }
 
-.weather-emoji{
-    display:none;
+.weather-emoji {
+    display: none;
 }
