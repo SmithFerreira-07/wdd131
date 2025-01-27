@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", serif;
+    color:black;
 }
 
 
@@ -12,8 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #009739;
-    color: #F7F7FF;
+    background-color: #00D150;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
@@ -24,8 +24,7 @@
 header {
     text-align: center;
     padding: 20px;
-    background: #009739;
-    color: #fff;
+    background: #00D150;
     font-size: 2rem;
     position: relative;
 }
@@ -71,6 +70,7 @@ header::after {
     justify-content: space-between;
     width: 600px;
     height: 300px;
+    text-align:center;
   }
   
   .info {
@@ -87,8 +87,7 @@ header::after {
   
 
   .data-card-header {
-    background-color: #1b794e;
-    color: white;
+    background-color: #00D150;
     margin: 0px;
     padding: 10px 15px;
     position: relative;
@@ -97,11 +96,11 @@ header::after {
     font-size: 1.2em;
     font-weight: 500;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
 }
 
 .data-card-header-weather {
-    background-color: #1b794e;
-    color: white;
+    background-color: #00D150;
     margin: 0px;
     padding: 10px 15px;
     position: relative;
@@ -114,4 +113,8 @@ header::after {
 
 .data-card-header-weather::after{
     content:"🌤️";
+}
+
+.weather-emoji{
+    display:none;
 }

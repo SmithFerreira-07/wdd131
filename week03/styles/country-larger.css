@@ -44,6 +44,18 @@
         width: 100%;
     }
 
+    .data-card-header-weather::after{
+        content:"";
+    }
+
+    .weather-emoji{
+        display:flex;
+        text-align:center;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size:10rem;
+    }
+
 
     .data p {
         display: flex;
