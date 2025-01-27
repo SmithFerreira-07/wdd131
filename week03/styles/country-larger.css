@@ -48,12 +48,10 @@
         content:"";
     }
 
-    .weather-emoji{
+    .weather-icon{
         display:flex;
-        text-align:center;
         flex-direction: column;
         justify-content: space-between;
-        font-size:10rem;
     }
 
 

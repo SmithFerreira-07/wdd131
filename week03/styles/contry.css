@@ -123,6 +123,6 @@ header::after {
     content: "🌤️";
 }
 
-.weather-emoji {
+.weather-icon {
     display: none;
 }
