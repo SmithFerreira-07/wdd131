@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", serif;
 }
 
 
@@ -64,18 +65,24 @@ header::after {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
+    font-size:1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 600px;
+    height: 300px;
   }
   
   .info {
     top: 20px;
     left: 20px;
-    width: 200px;
+   
   }
   
   .weather {
     bottom: 20px;
     right: 20px;
-    width: 200px;
+    
   }
   
 

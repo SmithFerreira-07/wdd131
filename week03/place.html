@@ -7,7 +7,12 @@
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Eric Ferreira - Assignment for WDD 131">
     <meta name="author" content="Eric Ferreira">
     <link rel="stylesheet" href="styles/contry.css">
+    <link rel="stylesheet" href="styles/country-larger.css">
     <script src="scripts/contry.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <title>WDD 131 Country</title>
 </head>
 
@@ -18,23 +23,29 @@
 
     <main class="content">
         <div class="image-container">
-            <img src="images/capybara.webp" alt="Capybara" class="background-image">
+            <picture>
+                <source srcset="images/capybara.webp" media="(min-width: 769px)">
+                <img src="images/goldenLion.webp" alt="Capybara" class="background-image">
+            </picture>
             <div class="data info">
                 <h2 class="data-card-header">Data</h2>
-                <p>Area: 8,514,877 sq km</p>
-                <p>Population: 215,319,093</p>
-                <p>Capital: Brasília</p>
-                <p>Languages: Portuguese</p>
-                <p>Currency: Brazilian Real</p>
-                <p>Time Zone: UTC-3</p>
-                <p>Calling Code: +55</p>
-                <p>Internet TLD: .br</p>
+                <p><strong>Area:</strong> 8,514,877 sq km</p>
+                <p><strong>Population:</strong>215,319,093
+                </p>
+                <p><strong>Capital:</strong> Brasília</p>
+                <p><strong>Languages:</strong> Portuguese</p>
+                <p><strong>Currency:</strong> Brazilian Real</p>
+                <p><strong>Time Zone:</strong> UTC-3</p>
+                <p><strong>Calling Code:</strong> +55</p>
+                <p><strong>Internet TLD:</strong> .br</p>
             </div>
 
             <div class="data weather">
                 <h2 class="data-card-header-weather">Weather</h2>
-                <p>Label: Value</p>
-                <p>Label: Value</p>
+                <p><strong>Temperature:</strong>10 °C</p>
+                <p><strong>Conditions:</strong> Mostly Cloudy</p>
+                <p><strong>Wind:</strong> +55</p>
+                <p><strong>Wind Chill:</strong> <span id="windChillValue"></span></p>
             </div>
         </div>
     </main>
