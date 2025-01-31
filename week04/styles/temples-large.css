@@ -21,3 +21,13 @@
     }
 
 }
+
+
+@media (min-width: 768px) {
+    #nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+    }
+}
