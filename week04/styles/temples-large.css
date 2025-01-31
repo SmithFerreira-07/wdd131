@@ -1,0 +1,23 @@
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #C03221;
+        width: 100%;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+
+    .hamburger {
+        display: flex;
+    }
+
+    .album {
+        grid-template-columns: 1fr; 
+    }
+
+}
