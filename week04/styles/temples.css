@@ -16,13 +16,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #C03221;
+    background-color: #96271B;
     padding: 0 20px;
     height: 50px;
 }
 
 .navbar .brand {
-    color: #F7F7FF;
+    color: #FFFFFF;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -34,7 +34,7 @@ main {
 }
 
 .navbar .nav-links a {
-    color: #F7F7FF;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 1rem;
     margin: 20px;
@@ -51,8 +51,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #C03221;
-    color: #F7F7FF;
+    background-color: #96271B;
+    color: #FFFFFF;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
@@ -83,7 +83,7 @@ figure {
 figure img {
     width: 230px;
     height: 153px;
-    border: 2px solid #F7F7FF;
+    border: 2px solid #FFFFFF;
     border-radius: 5px;
     box-shadow: 0 4px 8px #031927;
 }
@@ -105,12 +105,12 @@ figcaption {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: #F7F7FF;
+    background: #FFFFFF;
 }
 
 .x-button {
     display: none;
-    color: #F7F7FF;
+    color: #FFFFFF;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
@@ -118,7 +118,7 @@ figcaption {
 }
 
 .image-cards{
-    background-color: rgb(213, 221, 212);
+    background-color: #f5f6fa;
     padding:10px;
     box-shadow: 0 4px 8px #031927;
     transition: transform 0.2s;
@@ -126,4 +126,8 @@ figcaption {
 
 .image-cards:hover {
     transform: translateY(-3px);
+}
+
+.purple-content{
+    color:purple;
 }

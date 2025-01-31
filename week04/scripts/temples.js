@@ -80,7 +80,7 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   {
-    templeName: "Sacramento California Temple",
+    templeName: "Sacramento CA",
     location: "Sacramento, CA, USA",
     dedicated: "2006, September, 3",
     area: 19500,
@@ -88,7 +88,7 @@ const temples = [
       "https://churchofjesuschristtemples.org/assets/img/temples/sacramento-california-temple/sacramento-california-temple-8098-main.jpg"
   },
   {
-    templeName: "Nauvoo Illinois Temple",
+    templeName: "Nauvoo Illinois",
     location: "Nauvoo, Illinois",
     dedicated: "1999, October, 24",
     area: 54000,
@@ -96,7 +96,7 @@ const temples = [
       "https://churchofjesuschristtemples.org/assets/img/temples/nauvoo-illinois-temple/nauvoo-illinois-temple-50576-main.jpg"
   },
   {
-    templeName: "São Paulo Brazil Temple",
+    templeName: "São Paulo Brazil",
     location: "São Paulo, São Paulo",
     dedicated: "1976, March, 20",
     area: 59246,
@@ -115,7 +115,7 @@ function displayTemples(temples) {
     const figure = document.createElement("figure");
     figure.innerHTML = `
             <div class="image-cards">
-            <figcaption>${temple.templeName}<p><strong>Location: </strong>${temple.location}<br><strong>Dedicated: </strong>${temple.dedicated}<br><strong>Size: ${temple.area} sqr ft</strong></p></figcaption>
+            <figcaption><h2>${temple.templeName}</h2><p><strong class="purple-content">Location: </strong class="purple-content">${temple.location}<br><strong class="purple-content">Dedicated: </strong>${temple.dedicated}<br><strong class="purple-content">Size:</strong> ${temple.area} sqr ft</p></figcaption>
             <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
             </div>
         `;
