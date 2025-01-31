@@ -82,3 +82,20 @@ const temples = [
   // Add more temple objects here...
 ];
 
+
+const album = document.querySelector(".album");
+
+function displayTemples(temples) {
+  album.innerHTML = "";
+
+  temples.forEach((temple) => {
+    const figure = document.createElement("figure");
+    figure.innerHTML = `
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+            <figcaption>${temple.templeName}</figcaption>
+        `;
+        album.appendChild(figure);
+  });
+}
+
+displayTemples(temples);
