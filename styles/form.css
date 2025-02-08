@@ -56,7 +56,7 @@ select, input[type="date"], input[type="text"], textarea {
 .rating {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 7rem;
     margin-top: 0.5rem;
 }
 
@@ -66,4 +66,50 @@ select, input[type="date"], input[type="text"], textarea {
     align-items: center;
     cursor: pointer;
 }
+
+.rating input[type="radio"] {
+    margin-top: 0.5rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-item label {
+    font-weight: normal;
+    margin: 0;
+}
+
+.optional {
+    color: #666;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+input[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2a0a2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #3d0f3d;
+}
+
+
 
