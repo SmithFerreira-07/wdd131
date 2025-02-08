@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,53 @@
     <script src="scripts/form.js" defer></script>
     <title>WDD 131 Form - Eric Rafael Calado Ferreria</title>
 </head>
+
+
+
 <body>
     <header>
         <h1>Product Review</h1>
     </header>
+
+    <div class="form-container">
+        <form action="review.html" method="get">
+            <div class="form-group">
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Choose a Product ...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Overall Rating</label>
+                <div class="rating">
+                    <label>
+                        ★
+                        <input type="radio" name="rating" value="1" required>
+                    </label>
+                    <label>
+                        ★★
+                        <input type="radio" name="rating" value="2">
+                    </label>
+                    <label>
+                        ★★★
+                        <input type="radio" name="rating" value="3">
+                    </label>
+                    <label>
+                        ★★★★
+                        <input type="radio" name="rating" value="4">
+                    </label>
+                    <label>
+                        ★★★★★
+                        <input type="radio" name="rating" value="5">
+                    </label>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>©<span id="currentyear"></span> ⭐ Eric Rafael Calado Ferreira ⭐ - Brazil</p>
+                <p>Last Modification <span id="modification"></span></p>
+            </footer>
 </body>
+
 </html>
