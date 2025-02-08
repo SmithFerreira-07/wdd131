@@ -38,6 +38,10 @@ const products = [
     document.getElementById('reviewCount').textContent = count;
 }
 
+function capitalizeWords(str) {
+  return str.replace(/\b\w/g, letter => letter.toUpperCase());
+}
+
 
 function listProducts() {
     const selectElement = document.getElementById('product');
@@ -47,11 +51,12 @@ function listProducts() {
     
     
     products.forEach(product => {
-        const option = document.createElement('option');
+        let option = document.createElement('option');
         option.value = product.id;
         option.textContent = capitalizeWords(product.name);
         selectElement.appendChild(option);
     });
 }
 
-document.addEventListener('DOMContentLoaded', populateProducts);
+document.addEventListener('DOMContentLoaded', listProducts);
+document.addEventListener('DOMContentLoaded', updateReviewCounter);
