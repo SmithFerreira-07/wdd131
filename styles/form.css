@@ -112,4 +112,17 @@ input[type="submit"]:hover {
 }
 
 
+.footer {
+    background-color: #2a0a2a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+
 
