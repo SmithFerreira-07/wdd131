@@ -22,6 +22,8 @@ header {
     max-width: 800px;
     margin: 0 auto;
     width: 100%;
+    justify-content: center;
+    align-items:center;
 }
 
 form {
@@ -41,3 +43,27 @@ label {
     color: #000;
     font-weight: bold;
 }
+
+select, input[type="date"], input[type="text"], textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: white;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.rating label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
