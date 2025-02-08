@@ -30,3 +30,28 @@ const products = [
       averagerating: 5.0
     }
   ];
+
+  function updateReviewCounter() {
+    let count = parseInt(localStorage.getItem('reviewCount')) || 0;
+    count++;
+    localStorage.setItem('reviewCount', count);
+    document.getElementById('reviewCount').textContent = count;
+}
+
+
+function listProducts() {
+    const selectElement = document.getElementById('product');
+    
+    
+    products.sort((a, b) => a.name.localeCompare(b.name));
+    
+    
+    products.forEach(product => {
+        const option = document.createElement('option');
+        option.value = product.id;
+        option.textContent = capitalizeWords(product.name);
+        selectElement.appendChild(option);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', populateProducts);
