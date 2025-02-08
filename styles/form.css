@@ -76,7 +76,7 @@ select, input[type="date"], input[type="text"], textarea {
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    
     gap: 1rem;
 }
 
@@ -92,7 +92,7 @@ select, input[type="date"], input[type="text"], textarea {
 }
 
 .optional {
-    color: #666;
+    color: #333;
     font-weight: normal;
     font-style: italic;
 }
