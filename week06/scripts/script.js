@@ -14,6 +14,12 @@ const workoutInput = document.getElementById('workoutInput');
 const logWorkoutButton = document.getElementById('logWorkout');
 const weightInput = document.getElementById('weightInput');
 const logWeightButton = document.getElementById('logWeight');
+const userNameElement = document.getElementById('userName');
+
+const savedUserName = localStorage.getItem('userName');
+if (savedUserName) {
+    userNameElement.textContent = savedUserName;
+}
 
 let state = {
     goals: [],
