@@ -6,10 +6,18 @@
     --white: #ffffff;
 }
 
+.logo {
+    border-radius: 15px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -18,11 +26,20 @@ body {
     color: var(--federal-blue);
 }
 
+.logo-land{
+    display:flex;
+    justify-content:space-around;
+    background-color:var(--federal-blue);
+    color:var(--white);
+    padding: 1rem 2rem;
+    
+}
+
 .navbar {
     background-color: var(--federal-blue);
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     color: var(--white);
 }
@@ -36,6 +53,14 @@ body {
 .nav-links a {
     color: var(--white);
     text-decoration: none;
+    font-weight:bold;
+    font-size:25px;
+    text-align:center;
+}
+
+.nav-links a:hover{
+   opacity: 0.8;
+   color: var(--persian-blue);
 }
 
 .menu-toggle {
@@ -50,8 +75,32 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
+    font-weight:bold;
 }
 
 button:hover {
     opacity: 0.9;
+}
+
+.welcome-land {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.quotes {
+    background-color: var(--celestial-blue);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
 }
