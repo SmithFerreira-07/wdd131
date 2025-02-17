@@ -54,7 +54,7 @@ body {
     color: var(--white);
     text-decoration: none;
     font-weight:bold;
-    font-size:25px;
+    font-size:20px;
     text-align:center;
 }
 
@@ -103,4 +103,24 @@ button:hover {
     padding: 1.5rem;
     border-radius: 8px;
     height: fit-content;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20rem;
+    
+}
+
+
+
+footer {
+    background-color: var(--federal-blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    position:fixed;
+    bottom:0;
+    width:100%;
 }
