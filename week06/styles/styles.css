@@ -120,7 +120,35 @@ footer {
     padding: 1rem 2rem;
     text-align: center;
     margin-top: 2rem;
-    position:fixed;
     bottom:0;
     width:100%;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--federal-blue);
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
