@@ -5,12 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Pal - Track Your Progress!</title>
-    <script src="scripts/script.js" defer></script>
     <link rel="stylesheet" href="styles/styles.css">
-    <meta name="author" content="Eric Ferreira">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
@@ -20,12 +16,10 @@
             <h1>Workout Pal</h1>
         </div>
         <nav class="navbar">
-            
             <div class="menu-nav">
                 <button class="menu-toggle">☰</button>
                 <ul class="nav-links">
-                    
-                    <li><a href="#workout">Workout</a></li>
+                    <li><a href="#workout">Change Workout</a></li>
                     <li><a href="#weight">Weight</a></li>
                 </ul>
             </div>
@@ -52,15 +46,24 @@
                     <h2>Goals</h2>
                     <div id="goals-list" class="goals-list"></div>
                     <button class="add-goal">+ Add New Goal</button>
+                    <button class="clear-goals">Clear All Goals</button>
                 </section>
 
                 <section class="workout-section">
                     <h2>Workout</h2>
+                    <div class="workout-form">
+                        <input type="text" id="workoutInput" placeholder="Enter your workout...">
+                        <button id="logWorkout">Log Workout</button>
+                    </div>
                     <div id="current-workout"></div>
                 </section>
 
                 <section class="weight-section">
                     <h2>Weight Tracking</h2>
+                    <div class="weight-form">
+                        <input type="number" id="weightInput" placeholder="Enter your weight (kg)">
+                        <button id="logWeight">Log Weight</button>
+                    </div>
                     <div id="weight-chart"></div>
                 </section>
 
@@ -73,8 +76,17 @@
     </main>
     <footer>
         <p>&copy; 2025 Workout Pal - track-work.org</p>
-        
     </footer>
+
+    <!-- Goal Modal -->
+    <div id="goalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Goal</h2>
+            <input type="text" id="goalInput" placeholder="Enter your goal...">
+            <button id="saveGoal">Save Goal</button>
+        </div>
+    </div>
 </body>
 
 </html>
