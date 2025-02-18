@@ -40,3 +40,33 @@ function calculateCalories() {
     }
     document.getElementById('calories').textContent = caloriesBurned.toFixed(2);
 }
+
+
+document.getElementById('calculateRM').addEventListener('click', calculate1rm);
+
+
+function calculate1rm() {
+    const weight = document.getElementById('weightrm').value.trim();
+    const reps = document.getElementById('repsrm').value.trim();
+
+    
+    if (weight <= 0 || reps <= 0 || isNaN(weight) || isNaN(reps)) {
+        alert("Please enter valid numbers for both weight and reps.");
+        return;
+    }
+
+    const weightValue = parseFloat(weight);
+    const repsValue = parseInt(reps);
+
+    if (weightValue <= 0 || repsValue <= 0) {
+        alert("Please enter positive numbers.");
+        return;
+    }
+
+   
+    const oneRM = weightValue * (1 + 0.0333 * repsValue);
+    document.getElementById('resultrm').innerText = "Your 1RM is: " + oneRM.toFixed(2) + " kg";
+}
+
+
+
