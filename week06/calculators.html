@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="logo-land">
-            <img src="images/logo-resized3.webp" alt="wokoutpal-logo" loading="lazy" class="logo" />
+            <img src="images/logo-resized3.webp" alt="wokoutpal-logo" loading="lazy" class="logo" >
             <h1 class="title-land">Workout Pal</h1>
         </div>
         <nav class="navbar">
@@ -62,15 +62,15 @@
             <h1>1-Rep Max Calculator</h1>
         
             <label for="weight">Weight Lifted (kg):</label>
-            <input type="number" id="weightrm" placeholder="Enter weight lifted">
+            <input type="number" id="weightrm" name="weight" placeholder="Enter weight lifted" required>
         
             <label for="reps">Repetitions Performed:</label>
-            <input type="number" id="repsrm" placeholder="Enter number of reps">
+            <input type="number" id="repsrm" name="reps" placeholder="Enter number of reps" required>
         
             <button class="calculate-button" id="calculateRM">Calculate 1-Rep Max</button>
         
             <div id="resultrm">
-                <h3>Estimated 1-Rep Max: <span id="1rm-result">0</span> kg</h3>
+                <h3>Estimated 1-Rep Max: <span class="rm-result-number" id="1rm-result">0</span> kg</h3>
             </div>
         </div>
     </main>
