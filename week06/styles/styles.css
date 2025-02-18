@@ -184,6 +184,58 @@ footer {
     font-size: 24px;
 }
 
+#workoutModal .modal-content {
+    max-width: 400px;
+}
+
+#workoutModal label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+#workoutModal input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+}
+
+#workoutModal button {
+    margin-top: 1rem;
+}
+
+.workout-list {
+    margin-top: 1rem;
+}
+
+.workout-item {
+    background-color: var(--light-gray);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workout-item span {
+    font-weight: bold;
+}
+
+.workout-item button {
+    background-color: transparent;
+    border: none;
+    color: var(--federal-blue);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.workout-item button:hover {
+    color: var(--persian-blue);
+}
+
 @media (max-width: 768px) {
     .dashboard {
         grid-template-columns: 1fr;

@@ -5,16 +5,14 @@ const addGoalButton = document.querySelector('.add-goal');
 const clearGoalsButton = document.querySelector('.clear-goals');
 const streakCounter = document.getElementById('streak-counter');
 const weightChart = document.getElementById('weight-chart');
-const currentWorkout = document.getElementById('current-workout');
-const goalModal = document.getElementById('goalModal');
-const closeModal = document.querySelector('.close-modal');
-const saveGoalButton = document.getElementById('saveGoal');
-const goalInput = document.getElementById('goalInput');
-const workoutInput = document.getElementById('workoutInput');
-const logWorkoutButton = document.getElementById('logWorkout');
-const weightInput = document.getElementById('weightInput');
-const logWeightButton = document.getElementById('logWeight');
-const userNameElement = document.getElementById('userName');
+const workoutList = document.getElementById('workout-list'); 
+const addWorkoutButton = document.querySelector('.add-workout'); 
+const workoutModal = document.getElementById('workoutModal'); 
+const closeWorkoutModal = workoutModal.querySelector('.close-modal'); 
+const saveWorkoutButton = document.getElementById('saveWorkout'); 
+const exerciseNameInput = document.getElementById('exerciseName'); 
+const repetitionsInput = document.getElementById('repetitions'); 
+const weightInput = document.getElementById('weight'); 
 
 const savedUserName = localStorage.getItem('userName');
 if (savedUserName) {

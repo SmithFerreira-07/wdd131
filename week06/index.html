@@ -49,11 +49,8 @@
 
                 <section class="workout-section">
                     <h2>Workout</h2>
-                    <div class="workout-form">
-                        <input type="text" id="workoutInput" placeholder="Enter your workout...">
-                        <button id="logWorkout">Log Workout</button>
-                    </div>
-                    <div id="current-workout"></div>
+                    <button class="add-workout">+ Add New Workout</button>
+                    <div id="workout-list" class="workout-list"></div>
                 </section>
 
                 <section class="weight-section">
@@ -81,6 +78,19 @@
             <h2>Add New Goal</h2>
             <input type="text" id="goalInput" placeholder="Enter your goal...">
             <button id="saveGoal">Save Goal</button>
+        </div>
+    </div>
+    <div id="workoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Workout</h2>
+            <label for="exerciseName">Exercise Name:</label>
+            <input type="text" id="exerciseName" placeholder="Enter exercise name..." required>
+            <label for="repetitions">Repetitions:</label>
+            <input type="number" id="repetitions" placeholder="Enter number of repetitions..." required>
+            <label for="weight">Weight (optional):</label>
+            <input type="number" id="weight" placeholder="Enter weight...">
+            <button id="saveWorkout">Save Workout</button>
         </div>
     </div>
 </body>
