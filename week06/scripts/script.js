@@ -84,28 +84,17 @@ function renderGoals() {
         const checkbox = goalElement.querySelector('input');
         checkbox.addEventListener('change', () => {
             goal.completed = checkbox.checked;
-            if (goal.completed) {
-                goalElement.style.animation = 'fadeOut 0.3s ease';
-                setTimeout(() => {
-                    saveData();
-                    updateStreak();
-                    renderGoals();
-                }, 300);
-            } else {
-                saveData();
-                updateStreak();
-            }
+            saveData();
+            updateStreak();
+            renderGoals();
         });
 
         const deleteButton = goalElement.querySelector('.delete-goal');
         deleteButton.addEventListener('click', () => {
             if (confirm('Are you sure you want to delete this goal?')) {
-                goalElement.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => {
-                    state.goals = state.goals.filter(g => g.id !== goal.id);
-                    saveData();
-                    renderGoals();
-                }, 300);
+                state.goals = state.goals.filter(g => g.id !== goal.id);
+                saveData();
+                renderGoals();
             }
         });
 
@@ -114,12 +103,12 @@ function renderGoals() {
 }
 
 function updateStreak() {
-    const today = new Date();
-    const lastWorkout = new Date(state.lastWorkoutDate);
+    const today = new Date().toDateString();
+    const lastWorkout = state.lastWorkoutDate ? new Date(state.lastWorkoutDate).toDateString() : null;
 
-    if (lastWorkout.toDateString() === today.toDateString() && state.workouts.length > 0) {
+    if (lastWorkout === today && state.workouts.length > 0) {
         state.currentStreak++;
-    } else if ((today - lastWorkout) / (1000 * 60 * 60 * 24) > 1) {
+    } else if ((new Date(today) - new Date(lastWorkout)) / (1000 * 60 * 60 * 24) > 1) {
         state.currentStreak = 0;
     }
 
@@ -150,46 +139,23 @@ function getStreakMessage(streak) {
 const styleSheet = document.createElement('style');
 styleSheet.textContent = `
     @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
     }
-
     @keyframes slideOut {
-        from {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        to {
-            opacity: 0;
-            transform: translateX(20px);
-        }
+        from { opacity: 1; transform: translateX(0); }
+        to { opacity: 0; transform: translateX(20px); }
     }
-
     @keyframes fadeOut {
-        to {
-            opacity: 0.5;
-        }
+        to { opacity: 0.5; }
     }
 `;
 document.head.appendChild(styleSheet);
 
 function init() {
     loadData();
-
-    addGoalButton.addEventListener('click', () => {
-        goalModal.style.display = 'flex';
-    });
-
-    closeModal.addEventListener('click', () => {
-        goalModal.style.display = 'none';
-    });
-
+    addGoalButton.addEventListener('click', () => goalModal.style.display = 'flex');
+    closeModal.addEventListener('click', () => goalModal.style.display = 'none');
     saveGoalButton.addEventListener('click', () => {
         if (goalInput.value.trim()) {
             addGoal(goalInput.value.trim());
@@ -197,59 +163,11 @@ function init() {
             goalModal.style.display = 'none';
         }
     });
-
     clearGoalsButton.addEventListener('click', () => {
         state.goals = [];
         saveData();
         renderGoals();
     });
-
-    logWorkoutButton.addEventListener('click', () => {
-        const workout = workoutInput.value.trim();
-        if (workout) {
-            state.workouts.push({
-                date: new Date().toISOString(),
-                workout: workout
-            });
-            state.lastWorkoutDate = new Date().toISOString();
-            saveData();
-            renderWorkouts();
-            workoutInput.value = '';
-            updateStreak();
-        }
-    });
-
-    logWeightButton.addEventListener('click', () => {
-        const weight = parseFloat(weightInput.value);
-        if (!isNaN(weight)) {
-            state.weightLog.push({
-                date: new Date().toISOString(),
-                weight: weight
-            });
-            saveData();
-            renderWeightChart();
-            weightInput.value = '';
-        }
-    });
-
-    const quotes = [
-        "Your body can stand almost anything. It's your mind that you have to convince.",
-        "The only bad workout is the one that didn't happen.",
-        "Success starts with self-discipline.",
-        "Your health is an investment, not an expense.",
-        "Small progress is still progress.",
-        "Make yourself proud.",
-        "Discipline over motivation!"
-    ];
-
-    const quoteElement = document.getElementById('quote');
-    if (quoteElement) {
-        setInterval(() => {
-            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-            quoteElement.textContent = randomQuote;
-        }, 10000);
-    }
-
     renderAll();
 }
 
