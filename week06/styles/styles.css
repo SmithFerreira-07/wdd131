@@ -8,6 +8,8 @@
 
 .logo {
     border-radius: 15px;
+    width:auto;
+    height:auto;
 }
 
 * {
@@ -100,7 +102,7 @@ button:hover {
 }
 
 .quotes {
-    background-color: var(--celestial-blue);
+    background-color: var(--persian-blue);
     color: var(--white);
     padding: 1.5rem;
     border-radius: 8px;
