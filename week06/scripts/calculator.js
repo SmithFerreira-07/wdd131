@@ -65,7 +65,7 @@ function calculate1rm() {
 
    
     const oneRM = weightValue * (1 + 0.0333 * repsValue);
-    document.getElementById('resultrm').innerText = "Your 1RM is: " + oneRM.toFixed(2) + " kg";
+    document.getElementById('1rm-result').innerText = `${oneRM.toFixed(2)}`;
 }
 
 
