@@ -191,6 +191,12 @@ footer {
     font-size: 24px;
 }
 
+#weight-chart {
+    font-size:30px;
+    font-weight:bold;
+    padding:10px;
+}
+
 #workoutModal .modal-content {
     max-width: 400px;
 }

@@ -24,6 +24,7 @@ const repetitionsInput = document.getElementById('repetitions');
 const weightInput = document.getElementById('weight');
 const weightSave = document.getElementById('weightSave');
 const clearWorkoutsButton = document.querySelector(".clear-workouts");
+const clearWeightButton = document.getElementById("clearWeight");
 
 const savedUserName = localStorage.getItem('userName');
 if (savedUserName) {
@@ -110,7 +111,22 @@ function renderWorkouts() {
         const workoutItemElement = document.createElement("div");
         workoutItemElement.classList.add("workout-item");
         workoutItemElement.innerHTML = `<strong>${workout.exercise}</strong> - ${workout.repetitions} reps ${workout.weight ? `(${workout.weight} kg)` : ""}`;
+        if (Date.now() - workout.date < 1000) {
+            workoutItemElement.style.animation = 'slideIn 0.3s ease';
+        }
         workoutList.appendChild(workoutItemElement);
+        
+    });
+}
+
+function renderWeightLog() {
+    weightChart.innerHTML = "";
+
+    state.weightLog.forEach(weight => {
+        const weightItemElement = document.createElement("div");
+        weightItemElement.classList.add("weight-item");
+        weightItemElement.innerHTML = `<p>${new Date(weight.date).toLocaleDateString()}: ${weight.value} kg</p>`;
+        weightChart.appendChild(weightItemElement);
     });
 }
 
@@ -154,10 +170,6 @@ styleSheet.textContent = `
     @keyframes slideIn {
         from { opacity: 0; transform: translateX(-20px); }
         to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes slideOut {
-        from { opacity: 1; transform: translateX(0); }
-        to { opacity: 0; transform: translateX(20px); }
     }
     @keyframes fadeOut {
         to { opacity: 0.5; }
@@ -203,12 +215,19 @@ function init() {
         
     });
     logWeightButton.addEventListener("click", () => {
-        const weightItemChart = document.createElement("div");
-        weightItemChart.classList.add("workout-item");
-        weightChart.innerHTML = `<p>${weightSave.value.trim()}kg</p>`;
-        weightChart.appendChild(weightItemChart);
-
-    })
+        const weightValue = weightSave.value.trim();
+        if (weightValue) {
+            const weightEntry = {
+                id: Date.now(),  
+                value: weightValue,
+                date: Date.now()  
+            };
+            state.weightLog.push(weightEntry);
+            saveData();
+            renderWeightLog();
+            weightSave.value = '';
+        }
+    });
     clearWorkoutsButton.addEventListener("click", () => {
         state.workouts = [];
         saveData(); 
@@ -219,6 +238,11 @@ function init() {
         saveData();
         renderGoals();
     });
+    clearWeightButton.addEventListener("click", () => {
+        state.weightLog = [];
+        saveData();  
+        renderWeightLog();  
+    });
     renderAll();
 }
 
@@ -226,6 +250,7 @@ function renderAll() {
     renderGoals();
     renderStreak();
     renderWorkouts();
+    renderWeightLog();
 }
 
 init();
