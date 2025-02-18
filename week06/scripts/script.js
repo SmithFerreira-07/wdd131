@@ -106,7 +106,7 @@ function renderGoals() {
 }
 
 function renderWorkouts() {
-    workoutList.innerHTML = ''; 
+    workoutList.innerHTML = '';
     state.workouts.forEach(workout => {
         const workoutItemElement = document.createElement("div");
         workoutItemElement.classList.add("workout-item");
@@ -115,7 +115,7 @@ function renderWorkouts() {
             workoutItemElement.style.animation = 'slideIn 0.3s ease';
         }
         workoutList.appendChild(workoutItemElement);
-        
+
     });
 }
 
@@ -200,11 +200,11 @@ function init() {
 
         if (exercise && repetitions) {
             const workoutItem = {
-                id: Date.now(),  
+                id: Date.now(),
                 exercise: exercise,
                 repetitions: repetitions,
-                weight: weight || null,  
-                date: Date.now()  
+                weight: weight || null,
+                date: Date.now()
             };
             state.workouts.push(workoutItem);
             saveData();
@@ -214,15 +214,15 @@ function init() {
             weightInput.value = "";
             workoutModal.style.display = "none";
         }
-        
+
     });
     logWeightButton.addEventListener("click", () => {
         const weightValue = weightSave.value.trim();
         if (weightValue) {
             const weightEntry = {
-                id: Date.now(),  
+                id: Date.now(),
                 value: weightValue,
-                date: Date.now()  
+                date: Date.now()
             };
             state.weightLog.push(weightEntry);
             saveData();
@@ -232,8 +232,8 @@ function init() {
     });
     clearWorkoutsButton.addEventListener("click", () => {
         state.workouts = [];
-        saveData(); 
-        renderWorkouts(); 
+        saveData();
+        renderWorkouts();
     });
     clearGoalsButton.addEventListener('click', () => {
         state.goals = [];
@@ -242,9 +242,29 @@ function init() {
     });
     clearWeightButton.addEventListener("click", () => {
         state.weightLog = [];
-        saveData();  
-        renderWeightLog();  
+        saveData();
+        renderWeightLog();
     });
+
+    const quotes = [
+        "Your body can stand almost anything. It's your mind that you have to convince.",
+        "The only bad workout is the one that didn't happen.",
+        "Success starts with self-discipline.",
+        "Your health is an investment, not an expense.",
+        "Small progress is still progress.",
+        "Make yourself proud.",
+        "Discipline over motivation!",
+        "The gym is not just a place where you lift weights—it's a sanctuary where you build strength, resilience, and character. Every drop of sweat is a testament to your commitment, every rep is a step closer to a better version of yourself. You are not just sculpting your body; you are forging a mindset that will carry you through every challenge in life. Remember, the only limits that exist are the ones you place on yourself. Keep pushing, keep growing, and watch how your hard work transforms not only your body but your entire world."
+    ];
+
+    const quoteElement = document.getElementById('quote');
+    if (quoteElement) {
+        setInterval(() => {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            quoteElement.textContent = randomQuote;
+        }, 300000);
+    }
+
     renderAll();
 }
 
