@@ -1,3 +1,5 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 document.getElementById('signupForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const userName = document.getElementById('name').value.trim();
@@ -6,3 +8,10 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
         window.location.href = 'index.html';
     }
 });
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.textContent = navLinks.classList.contains('active') ? '×' : '☰';
+    });
+}

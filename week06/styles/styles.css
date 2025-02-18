@@ -38,7 +38,7 @@ body {
     background-color: var(--federal-blue);
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     color: var(--white);
     position: relative;
