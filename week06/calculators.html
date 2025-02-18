@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/calculator.css">
     <script src="scripts/calculator.js" defer></script>
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Eric Ferreira - Assignment for WDD 131">
     <meta name="author" content="Eric Ferreira">
@@ -13,7 +14,7 @@
     <header>
         <div class="logo-land">
             <img src="images/logo-resized3.webp" alt="wokoutpal-logo" loading="lazy" class="logo" />
-            <h1>Workout Pal</h1>
+            <h1 class="title-land">Workout Pal</h1>
         </div>
         <nav class="navbar">
             <div class="menu-nav">
@@ -28,6 +29,53 @@
     </header>
     <main>
         
+        <div class="calculator-container">
+            <h1>Workout Calories Calculator</h1>
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter your weight" />
+            </div>
+            
+            <div class="form-group">
+                <label for="exercise">Exercise Type:</label>
+                <select id="exercise">
+                    <option value="running">Running</option>
+                    <option value="cycling">Cycling</option>
+                    <option value="jumping">Jumping Rope</option>
+                    <option value="swimming">Swimming</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="duration">Duration (minutes):</label>
+                <input type="number" id="duration" placeholder="Enter workout duration" />
+            </div>
+    
+            <button class="calculate-button" id="calculate-button">Calculate Calories Burned</button>
+    
+            <div id="result" class="result">
+                <h2>Calories Burned: <span id="calories">0</span> kcal</h2>
+            </div>
+        </div>
+
+        <div class="calculator-container">
+            <h1>1-Rep Max Calculator</h1>
+        
+            <label for="weight">Weight Lifted (kg):</label>
+            <input type="number" id="weight" placeholder="Enter weight lifted">
+        
+            <label for="reps">Repetitions Performed:</label>
+            <input type="number" id="reps" placeholder="Enter number of reps">
+        
+            <button class="calculate-button" onclick="calculate1RM()">Calculate 1-Rep Max</button>
+        
+            <div id="result">
+                <h3>Estimated 1-Rep Max: <span id="1rm-result">0</span> kg</h3>
+            </div>
+        </div>
     </main>
+    <footer class="footer-sticked">
+        <p>&copy; 2025 Workout Pal - track-work.org</p>
+    </footer>
 </body>
 </html>
