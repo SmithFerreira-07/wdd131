@@ -143,6 +143,13 @@ footer {
     text-decoration: line-through;
 }
 
+.goals-list {
+    background-color: var(--persian-blue);
+    padding:10px;
+    margin:10px;
+    border-radius:10px;
+}
+
 .delete-goal {
     background-color: transparent;
     border: none;
@@ -208,6 +215,9 @@ footer {
 
 .workout-list {
     margin-top: 1rem;
+    background-color:var(--persian-blue);
+    padding:10px;
+    border-radius:10px;
 }
 
 .workout-item {
