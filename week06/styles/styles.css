@@ -197,8 +197,37 @@ footer {
     padding:10px;
 }
 
+#weightSave {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+}
+
+#streak-counter {
+    font-size:20px;
+    font-weight:bold;
+}
+
+#workoutModal {
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 #workoutModal .modal-content {
     max-width: 400px;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 #workoutModal label {

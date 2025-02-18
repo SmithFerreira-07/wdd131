@@ -134,13 +134,16 @@ function renderWeightLog() {
 function updateStreak() {
     const today = new Date().toDateString();
     const lastWorkout = state.lastWorkoutDate ? new Date(state.lastWorkoutDate).toDateString() : null;
-
     if (lastWorkout === today && state.workouts.length > 0) {
         state.currentStreak++;
-    } else if ((new Date(today) - new Date(lastWorkout)) / (1000 * 60 * 60 * 24) > 1) {
+    } else if (lastWorkout && (new Date(today) - new Date(lastWorkout)) / (1000 * 60 * 60 * 24) > 1) {
+        state.currentStreak = 0;
+    } else if (!lastWorkout) {
         state.currentStreak = 0;
     }
-
+    if (state.workouts.length > 0) {
+        state.lastWorkoutDate = state.workouts[state.workouts.length - 1].date;
+    }
     renderStreak();
     saveData();
 }
@@ -162,7 +165,7 @@ function getStreakMessage(streak) {
     if (streak < 3) return "Great start! Keep going!";
     if (streak < 7) return "You're building momentum!";
     if (streak < 14) return "You're on fire! 🔥";
-    return "Unstoppable! 🏆";
+    if (streak > 20) return "Unstoppable! 🏆";
 }
 
 const styleSheet = document.createElement('style');
@@ -181,7 +184,7 @@ function init() {
     loadData();
     addGoalButton.addEventListener('click', () => goalModal.style.display = 'flex');
     closeModal.addEventListener('click', () => goalModal.style.display = 'none');
-    addWorkoutButton.addEventListener("click", () => workoutModal.style.display = "block");
+    addWorkoutButton.addEventListener("click", () => workoutModal.style.display = "flex");
     closeWorkoutModal.addEventListener("click", () => workoutModal.style.display = "none");
     saveGoalButton.addEventListener('click', () => {
         if (goalInput.value.trim()) {
@@ -205,7 +208,6 @@ function init() {
             };
             state.workouts.push(workoutItem);
             saveData();
-            console.log(state);
             renderWorkouts();
             exerciseNameInput.value = "";
             repetitionsInput.value = "";
