@@ -22,6 +22,7 @@ const saveWorkoutButton = document.getElementById('saveWorkout');
 const exerciseNameInput = document.getElementById('exerciseName');
 const repetitionsInput = document.getElementById('repetitions');
 const weightInput = document.getElementById('weight');
+const clearWorkoutsButton = document.querySelector(".clear-workouts");
 
 const savedUserName = localStorage.getItem('userName');
 if (savedUserName) {
@@ -156,12 +157,33 @@ function init() {
     loadData();
     addGoalButton.addEventListener('click', () => goalModal.style.display = 'flex');
     closeModal.addEventListener('click', () => goalModal.style.display = 'none');
+    addWorkoutButton.addEventListener("click", () => workoutModal.style.display = "block");
+    closeWorkoutModal.addEventListener("click", () => workoutModal.style.display = "none");
     saveGoalButton.addEventListener('click', () => {
         if (goalInput.value.trim()) {
             addGoal(goalInput.value.trim());
             goalInput.value = '';
             goalModal.style.display = 'none';
         }
+    });
+    saveWorkoutButton.addEventListener("click", () => {
+        const exercise = exerciseNameInput.value.trim();
+        const repetitions = repetitionsInput.value.trim();
+        const weight = weightInput.value.trim();
+
+        if (exercise && repetitions) {
+            const workoutItem = document.createElement("div");
+            workoutItem.classList.add("workout-item");
+            workoutItem.innerHTML = `<strong>${exercise}</strong> - ${repetitions} reps ${weight ? `(${weight} kg)` : ""}`;
+            workoutList.appendChild(workoutItem);
+            exerciseNameInput.value = "";
+            repetitionsInput.value = "";
+            weightInput.value = "";
+            workoutModal.style.display = "none";
+        }
+    });
+    clearWorkoutsButton.addEventListener("click", () => {
+        workoutList.innerHTML = "";
     });
     clearGoalsButton.addEventListener('click', () => {
         state.goals = [];
